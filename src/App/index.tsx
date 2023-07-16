@@ -95,6 +95,7 @@ function Flow() {
         node.querySelector('input')?.focus({ preventScroll: true });
       } else if (targetIsPane && connectingNodeId.current) {
         const parentNode = nodeInternals.get(connectingNodeId.current);
+        /* @ts-ignore-next-line */
         const childNodePosition = getChildNodePosition(event, parentNode);
 
         if (parentNode && childNodePosition) {
